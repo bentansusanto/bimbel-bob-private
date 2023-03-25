@@ -29,7 +29,7 @@ const Footer = () => {
         }
     }, [])
   return (
-    <div>
+    <div className='mt-40'>
         {
             matches? 
             (<div className='bg-[#002050] p-5 text-white'>
