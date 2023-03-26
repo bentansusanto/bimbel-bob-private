@@ -1,9 +1,10 @@
 import React from "react";
-import { AiTwotoneLeftCircle } from "react-icons/ai";
 import BgTestimoni from "../../../assets/bg-testimoni.svg";
 import { listTestimoni } from "../../../Data/ListTestimoni";
 
 const TestimoniSection = ({ matches }) => {
+
+
   return (
     <div className="mt-40 mb-20" id="testimoni">
       {matches ? (
@@ -43,13 +44,6 @@ const TestimoniSection = ({ matches }) => {
                     <p className="text-[13px]">{val.desc}</p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex space-x-3 justify-center">
-            {listTestimoni.map((slide, slideIndex) => (
-              <div key={slideIndex}>
-                <AiTwotoneLeftCircle className="text-gray-200 text-[10px]" />
               </div>
             ))}
           </div>

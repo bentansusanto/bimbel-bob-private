@@ -1,6 +1,5 @@
 import React from 'react'
 import { listPackage } from '../../../Data/ListPackage'
-import {AiTwotoneLeftCircle} from 'react-icons/ai'
 import CheckPackage from "../../../assets/check-kotak.svg";
 import CheckBenefit from "../../../assets/checklist.svg";
 import "../../../index.css";
@@ -39,10 +38,10 @@ const PackageSection = ({matches}) => {
           {/* Package */}
           <div className="w-[100%] mt-6">
             <div className="grid grid-flow-col-dense gap-5 overflow-x-scroll scroll-smooth scrollbar-hide">
-              {listPackage.map((val, idx) => (
+              {listPackage.map((val, index) => (
                 <div
-                  key={idx}
-                  className="bg-white p-3 w-[88vw] rounded-xl space-y-3 h-[55vh] relative"
+                  key={index}
+                  className="p-3 w-[88vw] bg-white rounded-xl space-y-3 h-[55vh] relative"
                 >
                   <h4 className="font-bold text-[20px]">{val.title}</h4>
                   <p className="text-[14px] text-gray-500 w-[70%]">
@@ -68,15 +67,6 @@ const PackageSection = ({matches}) => {
                 </div>
               ))}
             </div>
-            <div className="flex space-x-1.5 mt-5 cursor-pointer justify-center">
-            {
-              listPackage.map((slide, slideIndex) => (
-                <div key={slideIndex}>
-                    <AiTwotoneLeftCircle className="text-gray-200 text-[10px]"/>
-                </div>  
-              ))
-            }
-          </div>
           </div>
         </div>
       ) : (

@@ -23,7 +23,7 @@ const HeroSection = ({matches}) => {
           <img
             src={BgHeroSection}
             alt="bg-hero"
-            className="absolute bottom-0 w-[90%] mx-auto"
+            className="absolute bottom-0 w-[92%] mx-auto"
           />
         </div>
       ) : (
