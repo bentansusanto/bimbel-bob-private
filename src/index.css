@@ -24,12 +24,12 @@ h1{
   background-position: center;
 }
 
-.bg-package-mobile{
+/* .bg-package-mobile{
   background: url('./assets/bg-package-mobile.webp');
   background-size: cover;
   background-position: center;
   @apply h-screen w-screen
-}
+} */
 
 .bg-promo-mobile{
   background: url('./assets/bg-promo.svg');

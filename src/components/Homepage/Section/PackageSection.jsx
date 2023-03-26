@@ -10,8 +10,8 @@ const PackageSection = ({matches}) => {
       {matches ? 
       // Mobile View
       (
-        <div className="block bg-package-mobile p-5">
-          <div className="text-white">
+        <div className="block bg-package-mobile p-4">
+          <div>
             <h4 className="text-[24px] font-bold">
               Pilihan Paket Terbaik Kami
             </h4>
@@ -36,20 +36,23 @@ const PackageSection = ({matches}) => {
             </ul>
           </div>
           {/* Package */}
-          <div className="w-[100%] mt-6">
-            <div className="grid grid-flow-col-dense gap-5 overflow-x-scroll scroll-smooth scrollbar-hide">
+          <div className="w-[100%] mt-10">
+            <div className="grid grid-cols-1 gap-14">
               {listPackage.map((val, index) => (
                 <div
                   key={index}
-                  className="p-3 w-[88vw] bg-white rounded-xl space-y-3 h-[55vh] relative"
+                  className="w-[88vw] bg-white rounded-xl h-[55vh] relative shadow-lg"
                 >
-                  <h4 className="font-bold text-[20px]">{val.title}</h4>
-                  <p className="text-gray-500 w-[80%]">
-                    {val.subtitle}
-                  </p>
-                  <p className="text-[18px] text-red-500 font-semibold">
-                    {val.price}
-                  </p>
+                  <div className='bg-blue-500 p-2 rounded-t-lg text-white'>
+                    <h4 className="font-bold text-[20px] text-center">{val.title}</h4>
+                  </div>
+                  <div className='p-3 space-y-3'>
+                    <p className="text-gray-500 w-[80%]">
+                      {val.subtitle}
+                    </p>
+                    <p className="text-[18px] text-red-500 font-semibold">
+                      {val.price}
+                    </p>
                   <div className="border-[1px] border-dashed border-gray-200 w-full " />
                   <div className="space-y-2">
                     {val.class?.map((val, idx) => (
@@ -63,6 +66,7 @@ const PackageSection = ({matches}) => {
                     <button className="bg-[#F59300] py-2.5 rounded-full w-[92%] text-white shadow-lg px-5">
                       Pesan Sekarang
                     </button>
+                  </div>
                   </div>
                 </div>
               ))}
