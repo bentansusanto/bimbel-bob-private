@@ -11,7 +11,7 @@ body{
 }
 
 p, li, button{
-  @apply md:text-[16px] text-[14px] 
+  @apply md:text-[16px] text-[15px] 
 }
 
 h1{

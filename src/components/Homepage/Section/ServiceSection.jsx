@@ -6,7 +6,7 @@ const ServiceSection = ({matches}) => {
   return (
     <section className="mt-40 overflow-x-hidden" id="service">
       {matches ? (
-        <div className="px-5 relative">
+        <div className="px-2 relative">
           <h2 className="text-[24px] font-bold text-center">
             Mengapa memilih les private di Bob’s Private?
           </h2>

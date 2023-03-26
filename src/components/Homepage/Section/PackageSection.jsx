@@ -44,7 +44,7 @@ const PackageSection = ({matches}) => {
                   className="p-3 w-[88vw] bg-white rounded-xl space-y-3 h-[55vh] relative"
                 >
                   <h4 className="font-bold text-[20px]">{val.title}</h4>
-                  <p className="text-[14px] text-gray-500 w-[70%]">
+                  <p className="text-gray-500 w-[80%]">
                     {val.subtitle}
                   </p>
                   <p className="text-[18px] text-red-500 font-semibold">

@@ -8,7 +8,7 @@ const MapelSection = ({matches}) => {
             matches? 
             (<div>
                 <div>
-                    <h2 className='text-[24px] font-bold text-center'>Ada 15 mata pelajaran yang akan kami ajarkan</h2>
+                    <h2 className='text-[24px] font-bold text-center px-5'>Ada 15 mata pelajaran yang akan kami ajarkan</h2>
                     <div className='mt-5 grid grid-cols-2 gap-5 px-2'>
                       {
                         ListMataPelajaran.map((val, idx) => (
