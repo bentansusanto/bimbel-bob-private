@@ -76,7 +76,7 @@ const PackageSection = ({matches}) => {
                     ))}
                   </div>
                   <div className="absolute bottom-3 w-full">
-                    <button onClick={handleOrderMessage} disabled={!order} className="bg-[#F59300] py-2.5 rounded-full w-[92%] text-white shadow-lg px-5">
+                    <button onClick={handleOrderMessage} disabled={!order} className="bg-[#F59300] py-2.5 rounded-full w-[92%] text-white shadow-lg font-semibold px-5">
                       Pesan Sekarang
                     </button>
                   </div>
