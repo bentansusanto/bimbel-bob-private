@@ -16,7 +16,7 @@ const TestimoniSection = ({ matches }) => {
           }}
           className="py-5"
         >
-          <h2 className="text-[24px] text-center font-bold">
+          <h2 className="text-[24px] px-3 text-center font-bold">
             Pengalaman mereka belajar di Bob’s Private
           </h2>
           <div className="grid grid-cols-1 gap-5 mt-10 justify-items-center ">
