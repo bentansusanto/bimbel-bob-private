@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { listPackage } from '../../../Data/ListPackage'
 import CheckPackage from "../../../assets/check-kotak.svg";
 import CheckBenefit from "../../../assets/checklist.svg";
 import "../../../index.css";
 
 const PackageSection = ({matches}) => {
+  const [order, setOrder ] = useState("")
+  const phoneNumber = "+6288976739803"
+  // const phoneNumber = "+6289604276162"
+
+  const handleOrder = (title) => {
+    setOrder(title)
+  }
+
+    const handleOrderMessage = () => {
+      const message = `Halo, saya mau bertanya untuk paket ${order}`;
+        window.open('https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message));
+    }
   return (
     <section className="mt-32" id="package">
       {matches ? 
@@ -41,12 +53,13 @@ const PackageSection = ({matches}) => {
               {listPackage.map((val, index) => (
                 <div
                   key={index}
-                  className="w-[88vw] bg-white rounded-xl h-[55vh] relative shadow-lg"
+                  onClick={() => handleOrder(val.title)}
+                  className="w-[88vw] bg-white rounded-xl h-[62vh] relative shadow-lg"
                 >
                   <div className='bg-blue-500 p-2 rounded-t-lg text-white'>
                     <h4 className="font-bold text-[20px] text-center">{val.title}</h4>
                   </div>
-                  <div className='p-3 space-y-3'>
+                  <div className='p-3 space-y-5'>
                     <p className="text-gray-500 w-[80%]">
                       {val.subtitle}
                     </p>
@@ -62,8 +75,8 @@ const PackageSection = ({matches}) => {
                       </div>
                     ))}
                   </div>
-                  <div className="absolute bottom-5 w-full">
-                    <button className="bg-[#F59300] py-2.5 rounded-full w-[92%] text-white shadow-lg px-5">
+                  <div className="absolute bottom-3 w-full">
+                    <button onClick={handleOrderMessage} disabled={!order} className="bg-[#F59300] py-2.5 rounded-full w-[92%] text-white shadow-lg px-5">
                       Pesan Sekarang
                     </button>
                   </div>
