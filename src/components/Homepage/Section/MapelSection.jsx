@@ -15,7 +15,7 @@ const MapelSection = ({matches}) => {
                           <div key={idx} className="relative">
                             <img src={val.foto} alt=""  className='brightness-50 h-24 w-full rounded-md'/>
                             <div className='absolute inset-0 px-2 flex justify-center items-center'>
-                              <h4 className='text-[15px] text-center text-white font-bold'>{val.mapel}</h4>
+                              <h4 className='text-[18px] text-center text-white font-bold'>{val.mapel}</h4>
                             </div>
                             {/* <img src={val.foto} alt='mapel' className='rounded-md brightness-50'/> */}
                           </div>

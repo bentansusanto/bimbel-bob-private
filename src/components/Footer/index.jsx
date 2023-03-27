@@ -16,6 +16,12 @@ const links = [
 
 const Footer = () => {
     const [matches, setMatches] = useState(mediaQuery.matches)
+    const message = "Halo, saya mau nanya soal paket les di bob private"
+    const phoneNumber = "089604276162"
+
+    const handleWhatsappMessage = () => {
+        window.open('https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message));
+    }
 
     useEffect(() => {
         const handler = (e) => {
@@ -59,7 +65,7 @@ const Footer = () => {
                 <footer className='text-center text-[14px] mt-10'>
                     ©2022, Bob's Private Indonesia
                 </footer>
-                <div className='fixed bottom-10 right-5'>
+                <div className='fixed bottom-10 right-5' onClick={handleWhatsappMessage}>
                     <img src={Whatsapp} alt="" className='w-14'/>
                 </div>
             </div>) : 
