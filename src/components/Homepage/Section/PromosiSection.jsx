@@ -4,6 +4,13 @@ import FreeTrial from "../../../assets/free-trial.svg";
 import "../../../index.css";
 
 const PromosiSection = ({ matches }) => {
+  const message = "Halo, saya mau nanya soal paket les di bob private"
+    const phoneNumber = "+6288976739803"
+
+    const handleWhatsappMessage = () => {
+        window.open('https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message));
+    }
+
   return (
     <div className="mt-40">
       {matches ? (
@@ -32,7 +39,7 @@ const PromosiSection = ({ matches }) => {
               </div>
             </div>
           </div>
-            <button className="bg-[#F59300] py-2.5 rounded-full flex mx-auto text-center mt-12 text-white shadow-lg px-5 font-semibold">
+            <button onClick={handleWhatsappMessage} className="bg-[#F59300] py-2.5 rounded-full flex mx-auto text-center mt-12 text-white shadow-lg px-5 font-semibold">
               Pesan Sekarang
             </button>
         </div>
