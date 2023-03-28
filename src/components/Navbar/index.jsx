@@ -18,6 +18,12 @@ const mediaQuery = window.matchMedia('(max-width: 600px)');
 const Navbar = () => {
     const [matches, setMatches] = useState(mediaQuery.matches);
     const [open, setOpen] = useState(false)
+    const message = "Halo, saya mau nanya soal paket les di Bob Private"
+    const phoneNumber = "+6288976739803"
+
+    const handleWhatsappMessage = () => {
+        window.open('https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message));
+    }
 
     useEffect(() => {
         const handler = (e) => {
@@ -54,7 +60,9 @@ const Navbar = () => {
                             </li>
                         ))
                     }
-                    <button className="bg-[#F59300] py-2.5 w-full rounded-full text-white shadow-lg px-5">Contact Us</button>
+                    <div onClick={handleWhatsappMessage}>
+                         <button className="bg-[#F59300] py-2.5 w-full rounded-full text-white shadow-lg px-5">Contact Us</button>
+                    </div>
                 </ul>
                 </div>
             </div>) : 
@@ -70,7 +78,7 @@ const Navbar = () => {
                                 </li>
                             ))
                         }
-                        <button className="bg-[#F59300] py-2.5 rounded-full text-white shadow-lg px-5">Contact Us</button>
+                        <button onClick={handleWhatsappMessage} className="bg-[#F59300] py-2.5 rounded-full text-white shadow-lg px-5">Contact Us</button>
                     </ul>
                 </div>
             )

@@ -1,22 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { listPackage } from '../../../Data/ListPackage'
 import CheckPackage from "../../../assets/check-kotak.svg";
 import CheckBenefit from "../../../assets/checklist.svg";
 import "../../../index.css";
 
 const PackageSection = ({matches}) => {
-  const [order, setOrder ] = useState("")
+  const [productName, setProductName] = useState('');
   const phoneNumber = "+6288976739803"
+  const [messageSent, setMessageSent] = useState(false);
   // const phoneNumber = "+6289604276162"
 
   const handleOrder = (title) => {
-    setOrder(title)
+    setProductName(title)
+    setMessageSent(false)
   }
 
     const handleOrderMessage = () => {
-      const message = `Halo, saya mau bertanya untuk paket ${order}`;
-        window.open('https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message));
+      setMessageSent(!messageSent);
     }
+
+  useEffect(() => {
+    if(messageSent !== null) {
+      const message = `Halo, saya mau bertanya untuk paket ${productName}`;
+      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank'); 
+    }
+  }, [messageSent, phoneNumber, productName])
+
   return (
     <section className="mt-32" id="package">
       {matches ? 
@@ -75,11 +84,12 @@ const PackageSection = ({matches}) => {
                       </div>
                     ))}
                   </div>
-                  <div className="absolute bottom-3 w-full">
-                    <button onClick={handleOrderMessage} disabled={!order} className="bg-[#F59300] py-2.5 rounded-full w-[92%] text-white shadow-lg font-semibold px-5">
+                  <div onClick={handleOrderMessage} disabled={!productName || messageSent}>
+                    <button  className="bg-[#F59300] absolute bottom-3 py-2.5 rounded-full w-[92%] text-white shadow-lg font-semibold px-5">
                       Pesan Sekarang
                     </button>
                   </div>
+                  
                   </div>
                 </div>
               ))}
@@ -135,9 +145,11 @@ const PackageSection = ({matches}) => {
                       </div>
                     ))}
                   </div>
-                  <button className="bg-[#F59300] py-2.5 rounded-full w-[18vw] absolute bottom-5 text-white shadow-lg px-5">
-                    Pesan Sekarang
-                  </button>
+                  <div onClick={handleOrderMessage} disabled={!productName || messageSent}>
+                    <button className="bg-[#F59300] py-2.5 rounded-full w-[18vw] absolute bottom-5 text-white shadow-lg px-5">
+                      Pesan Sekarang
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
