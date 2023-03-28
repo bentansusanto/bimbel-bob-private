@@ -16,7 +16,7 @@ const links = [
 
 const Footer = () => {
     const [matches, setMatches] = useState(mediaQuery.matches)
-    const message = "Halo, saya mau nanya soal paket les di bob private"
+    const message = "Halo, saya mau nanya soal paket les di Bob's Private"
     const phoneNumber = "+628812518233"
 
     const handleWhatsappMessage = () => {

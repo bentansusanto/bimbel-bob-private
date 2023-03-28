@@ -18,7 +18,7 @@ const mediaQuery = window.matchMedia('(max-width: 600px)');
 const Navbar = () => {
     const [matches, setMatches] = useState(mediaQuery.matches);
     const [open, setOpen] = useState(false)
-    const message = "Halo, saya mau nanya soal paket les di Bob Private"
+    const message = "Halo, saya mau nanya soal paket les di Bob's Private"
     const phoneNumber = "+628812518233"
 
     const handleWhatsappMessage = () => {

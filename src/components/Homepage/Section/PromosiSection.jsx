@@ -4,7 +4,7 @@ import FreeTrial from "../../../assets/free-trial.svg";
 import "../../../index.css";
 
 const PromosiSection = ({ matches }) => {
-  const message = "Halo, saya mau nanya soal paket les di Bob Private"
+  const message = "Halo, saya mau nanya soal paket les di Bob's Private"
   const phoneNumber = "+628812518233"
 
     const handleWhatsappMessage = () => {
