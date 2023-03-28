@@ -5,7 +5,7 @@ import "../../../index.css";
 
 const PromosiSection = ({ matches }) => {
   const message = "Halo, saya mau nanya soal paket les di bob private"
-    const phoneNumber = "+6288976739803"
+  const phoneNumber = "+628812518233"
 
     const handleWhatsappMessage = () => {
         window.open('https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message));

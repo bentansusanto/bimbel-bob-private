@@ -19,7 +19,7 @@ const Navbar = () => {
     const [matches, setMatches] = useState(mediaQuery.matches);
     const [open, setOpen] = useState(false)
     const message = "Halo, saya mau nanya soal paket les di Bob Private"
-    const phoneNumber = "+6288976739803"
+    const phoneNumber = "+628812518233"
 
     const handleWhatsappMessage = () => {
         window.open('https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message));

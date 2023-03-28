@@ -6,7 +6,7 @@ import "../../../index.css";
 
 const PackageSection = ({matches}) => {
   const [productName, setProductName] = useState('');
-  const phoneNumber = "+6288976739803"
+  const phoneNumber = "+628812518233"
   const [messageSent, setMessageSent] = useState(false);
   // const phoneNumber = "+6289604276162"
 
