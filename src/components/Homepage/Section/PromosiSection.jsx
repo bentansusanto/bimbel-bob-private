@@ -39,7 +39,7 @@ const PromosiSection = ({ matches }) => {
               </div>
             </div>
           </div>
-            <button onClick={handleWhatsappMessage} className="bg-[#F59300] py-2.5 rounded-full flex mx-auto text-center mt-12 text-white shadow-lg px-5 font-semibold">
+            <button id="contact" onClick={handleWhatsappMessage} className="bg-[#F59300] py-2.5 rounded-full flex mx-auto text-center mt-12 text-white shadow-lg px-5 font-semibold">
               Pesan Sekarang
             </button>
         </div>

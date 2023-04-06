@@ -66,7 +66,9 @@ const Footer = () => {
                     ©2022, Bob's Private Indonesia
                 </footer>
                 <div className='fixed bottom-10 right-5' onClick={handleWhatsappMessage}>
-                    <img src={Whatsapp} alt="" className='w-14'/>
+                    <button id='contact'>
+                        <img src={Whatsapp} alt="" className='w-14'/>
+                    </button>
                 </div>
             </div>) : 
             (<div></div>)

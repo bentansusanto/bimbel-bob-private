@@ -60,8 +60,8 @@ const Navbar = () => {
                             </li>
                         ))
                     }
-                    <div onClick={handleWhatsappMessage}>
-                         <button className="bg-[#F59300] py-2.5 w-full rounded-full text-white shadow-lg px-5">Contact Us</button>
+                    <div>
+                         <button id="contact" onClick={handleWhatsappMessage} className="bg-[#F59300] py-2.5 w-full rounded-full text-white shadow-lg px-5">Contact Us</button>
                     </div>
                 </ul>
                 </div>
