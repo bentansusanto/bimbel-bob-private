@@ -2,7 +2,7 @@
 1. Download Projek dengan file zip
 2. Extrak zip, buka folder projek di vs code
 3. Lakukan npm install pada terminal (jika belum ada node js di komputer, bisa download terlebih dahulu pada website node js)
-4. Setelah itu jalankan npm start untuk menjalankan website di local
+4. Setelah ketik npm start di terminal vs code untuk menjalankan website di local
 
 ## Cara hosting kembali ke niagahoster
 1. Matikan terlebih dahulu website yang di local dengan tekan ctrl + c
