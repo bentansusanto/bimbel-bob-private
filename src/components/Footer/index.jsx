@@ -63,7 +63,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <footer className='text-center text-[14px] mt-10'>
-                    ©2022, Bob's Private Indonesia
+                    ©2023, Bob's Private Indonesia
                 </footer>
                 <div className='fixed bottom-10 right-5' onClick={handleWhatsappMessage}>
                     <button id='contact'>

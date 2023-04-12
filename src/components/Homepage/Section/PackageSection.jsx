@@ -21,7 +21,7 @@ const PackageSection = ({matches}) => {
 
   useEffect(() => {
     if(messageSent !== null) {
-      const message = `Halo, saya mau bertanya untuk paket ${productName}`;
+      const message = `Halo, saya mau bertanya untuk ${productName}`;
       window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank'); 
     }
   }, [messageSent, phoneNumber, productName])
